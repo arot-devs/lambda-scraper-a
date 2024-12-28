@@ -1,4 +1,31 @@
-# Lambda Scraper
+# Usage
+
+
+```
+# terraform
+
+
+# docker
+
+
+# add user to docker group
+sudo usermod -aG docker $USER
+sudo 
+
+# should be able to run
+docker run hello-world
+
+# edit cariables in variables.tf
+
+# lambda terraform
+https://medium.com/nerd-for-tech/web-scraping-with-a-proxy-pool-the-cheap-way-4c7d6fc9f859
+
+terraform init
+terraform apply -auto-approve
+```
+
+
+# Lambda Scraper  [original readme]
 
 (See also [lambda-selenium](https://github.com/teticio/lambda-selenium))
 
