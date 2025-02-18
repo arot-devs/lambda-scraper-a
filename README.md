@@ -3,7 +3,7 @@
 
 ```
 # terraform
-
+# https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 
 # docker
 
@@ -22,6 +22,18 @@ https://medium.com/nerd-for-tech/web-scraping-with-a-proxy-pool-the-cheap-way-4c
 
 terraform init
 terraform apply -auto-approve
+```
+
+to remove the resources created:
+
+```bash
+terraform apply -destroy -auto-approve
+```
+
+(if forgot to run it and tfstates is no longer available, run:)
+```bash
+aws lambda list-functions --query "Functions[?starts_with(FunctionName, 'proxy-')].FunctionName" --output text
+# aws lambda list-functions --query "Functions[?starts_with(FunctionName, 'proxy-')].FunctionName" --output text | xargs -n 1 aws lambda delete-function --function-name
 ```
 
 
